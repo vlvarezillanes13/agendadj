@@ -39,4 +39,29 @@ urlpatterns = [
         'api/persona/update/<pk>',
         views.PersonUpdateView.as_view(),
     ),
+    path(
+        'api/persona/modificar/<pk>',
+        views.PersonRetrieveUpdateAPIView.as_view(),
+    ),
+    #
+    path(
+        'api/personas/',
+        views.PersonApiLista.as_view(),
+    ),
+    path(
+        'api/reuniones/',
+        views.ReunionApiLista.as_view(),
+    ),
+    path(
+        'api/reuniones-link/',
+        views.ReunionApiListaLink.as_view(),
+    ),
+    path(
+        'api/personas/paginacion/',
+        views.PersonPaginationLits.as_view(),
+    ),
+    path(
+        'api/reunion/por-job/',
+        views.ReunionByPersonJob.as_view(),
+    ),
 ]
