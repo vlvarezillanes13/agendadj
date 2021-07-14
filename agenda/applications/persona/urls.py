@@ -27,4 +27,8 @@ urlpatterns = [
         'api/persona/create/',
         views.PersonCreateView.as_view(),
     ),
+    path(
+        'api/persona/detail/<pk>',
+        views.PersonDetailView.as_view(),
+    ),
 ]

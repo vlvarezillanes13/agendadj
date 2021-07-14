@@ -8,6 +8,7 @@ from django.views.generic import(
 from rest_framework.generics import( 
     ListAPIView,
     CreateAPIView,
+    RetrieveAPIView,
 )
 #
 from .models import Person
@@ -48,3 +49,8 @@ class PersonSearchApiView(ListAPIView):
 
 class PersonCreateView(CreateAPIView):
     serializer_class = PersonSerializer
+
+
+class PersonDetailView(RetrieveAPIView):
+    serializer_class = PersonSerializer
+    queryset = Person.objects.all()
