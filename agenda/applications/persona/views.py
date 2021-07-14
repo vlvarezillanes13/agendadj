@@ -5,7 +5,10 @@ from django.views.generic import(
     TemplateView,
 )
 #
-from rest_framework.generics import ListAPIView
+from rest_framework.generics import( 
+    ListAPIView,
+    CreateAPIView,
+)
 #
 from .models import Person
 #
@@ -42,3 +45,6 @@ class PersonSearchApiView(ListAPIView):
         return Person.objects.filter(
             full_name__icontains=kword
         )
+
+class PersonCreateView(CreateAPIView):
+    serializer_class = PersonSerializer
