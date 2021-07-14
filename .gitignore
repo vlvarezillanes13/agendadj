@@ -1,0 +1,8 @@
+# git ignore
+agenda/secret.json
+
+# Python cache
+*pyc
+
+#Visual SC
+agenda/.vscode
