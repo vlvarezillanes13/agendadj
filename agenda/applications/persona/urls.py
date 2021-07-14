@@ -35,4 +35,8 @@ urlpatterns = [
         'api/persona/delete/<pk>',
         views.PersonDeleteView.as_view(),
     ),
+    path(
+        'api/persona/update/<pk>',
+        views.PersonUpdateView.as_view(),
+    ),
 ]

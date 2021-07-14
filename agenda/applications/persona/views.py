@@ -60,3 +60,7 @@ class PersonDetailView(RetrieveAPIView):
 class PersonDeleteView(DestroyAPIView):
     serializer_class = PersonSerializer
     queryset = Person.objects.all()
+
+class PersonUpdateView(UpdateAPIView):
+    serializer_class = PersonSerializer
+    queryset = Person.objects.all()
